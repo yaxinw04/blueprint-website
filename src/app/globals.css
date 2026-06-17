@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f7fb;
+  --foreground: #1a2d47;
+  --muted: #5a6d84;
+  --accent: #1e3a5f;
+  --accent-hover: #152d4a;
+  --accent-light: #e3ebf5;
+  --sage: #3d5a80;
+  --sage-light: #e8eff8;
+  --card: #ffffff;
+  --border: #d4dfe9;
+}
+
+@theme inline {
+  --color-background: #f4f7fb;
+  --color-foreground: #1a2d47;
+  --color-muted: #5a6d84;
+  --color-accent: #1e3a5f;
+  --color-accent-hover: #152d4a;
+  --color-accent-light: #e3ebf5;
+  --color-sage: #3d5a80;
+  --color-sage-light: #e8eff8;
+  --color-card: #ffffff;
+  --color-border: #d4dfe9;
+  --font-family-sans: var(--font-source-sans), system-ui, sans-serif;
+  --font-family-serif: var(--font-fraunces), Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+body {
+  background-color: #f4f7fb;
+  color: #1a2d47;
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+  min-height: 100vh;
+  line-height: 1.65;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-marquee {
+  animation: logo-marquee 35s linear infinite;
+}
+
+.logo-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}
